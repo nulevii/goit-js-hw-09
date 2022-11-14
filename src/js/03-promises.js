@@ -41,5 +41,4 @@ function onSubmit(event) {
     delayNum += stepNum;
   }
 }
-
 FORM.addEventListener('submit', onSubmit);
