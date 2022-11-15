@@ -64,7 +64,7 @@ flatpickr(CALENDAR, {
   },
 });
 
-timeCounter = () => {
+const timeCounter = () => {
   const convertedTime = convertMs(difference);
   DAYS.textContent = String(convertedTime.days).padStart(2, '0');
   HOURS.textContent = String(convertedTime.hours).padStart(2, '0');
