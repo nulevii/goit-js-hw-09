@@ -29,7 +29,7 @@ LABEL.forEach(value => {
 });
 
 let difference;
-
+let clockTimeInterval;
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
@@ -70,11 +70,14 @@ const timeCounter = () => {
   HOURS.textContent = String(convertedTime.hours).padStart(2, '0');
   MINUTES.textContent = String(convertedTime.minutes).padStart(2, '0');
   SECONDS.textContent = String(convertedTime.seconds).padStart(2, '0');
+  if (difference < 1000) {
+    clearInterval(clockTimeInterval)
+  }
 
-  console.log(convertedTime.days);
   difference -= 1000;
 };
 
-START_BTN.addEventListener('click', () => {
-  setInterval(timeCounter, 1000);
+ START_BTN.addEventListener('click', () => {
+   clockTimeInterval = setInterval(timeCounter, 1000);
+   START_BTN.disabled = true;
 });
