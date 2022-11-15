@@ -11,7 +11,6 @@ function getRandomHexColor() {
 
 const startChangeBgColor = () => {
   BODY.style.backgroundColor = getRandomHexColor();
-  changeBgColorcondition = !changeBgColorcondition;
 };
 
 START_BTN.addEventListener('click', () => {
