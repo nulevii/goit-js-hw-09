@@ -61,7 +61,6 @@ flatpickr(CALENDAR, {
       return;
     }
     START_BTN.disabled = false;
-    console.log(difference);
   },
 });
 

@@ -17,6 +17,7 @@ const startChangeBgColor = () => {
 START_BTN.addEventListener('click', () => {
   START_BTN.disabled = true;
   STOP_BTN.disabled = false;
+
   intervalID = setInterval(startChangeBgColor, 1000);
 });
 
