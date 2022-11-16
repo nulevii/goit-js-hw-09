@@ -22,9 +22,9 @@ function onSubmit(event) {
   const {
     elements: { delay, step, amount },
   } = event.target;
-  const delayNum = Number(delay.value);
-  const amountNum = Number(amount.value);
-  const stepNum = Number(step.value);
+  let delayNum = Number(delay.value);
+  let amountNum = Number(amount.value);
+  let stepNum = Number(step.value);
 
   for (let position = 0; position < amountNum; position += 1) {
     createPromise({ position, delayNum })
